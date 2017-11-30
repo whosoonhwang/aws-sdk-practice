@@ -86,9 +86,8 @@ public final class AWSS3Util {
 				.withRegion(region)
 				.build();
 
-		final String s3Path = convertS3FilePath(s3BucketName, path);
-		
-    	return existS3File(s3Client, s3Path, fileName);
+		final String s3Path = convertS3FilePath(s3BucketName, path);		
+    return existS3File(s3Client, s3Path, fileName);
 	}
 
 	/**
@@ -161,8 +160,7 @@ public final class AWSS3Util {
 		final File dir = new File(savePath);
 		if (!dir.exists()) dir.mkdirs();
 		
-		final File file = new File(savePath, saveFileName);
-		
+		final File file = new File(savePath, saveFileName);		
 		final S3Object s3Object = s3Client.getObject(new GetObjectRequest(s3Path, fileUid));
 		
 		return convertS3ObjectToFile(s3Object, file);
