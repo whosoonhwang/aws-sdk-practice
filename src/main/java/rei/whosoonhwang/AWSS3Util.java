@@ -86,8 +86,8 @@ public final class AWSS3Util {
 				.withRegion(region)
 				.build();
 
-		final String s3Path = convertS3FilePath(s3BucketName, path);		
-    return existS3File(s3Client, s3Path, fileName);
+		final String s3Path = convertS3FilePath(s3BucketName, path);
+		return existS3File(s3Client, s3Path, fileName);
 	}
 
 	/**
