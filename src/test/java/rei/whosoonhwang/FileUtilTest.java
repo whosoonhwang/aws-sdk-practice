@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * FileUtil test
  * @author hshwang
- * @since 2017. 11. 30.
+ * @since 2017. 12. 05.
  */
 public class FileUtilTest {
 	@Test
