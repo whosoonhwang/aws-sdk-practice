@@ -180,7 +180,7 @@ public final class AWSS3Util {
 			){
 		    
 		    byte[] buf = new byte[1024];
-		    int len = 0;
+		    int len;
 		    
 		    while ((len = inputStream.read(buf)) > 0){
 		       outStream.write(buf, 0, len);
